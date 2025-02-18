@@ -1,0 +1,230 @@
+### ------------- CLIENTS --------------------
+GET http://localhost:3000/clients HTTP/1.1
+
+### Get Client by id 
+GET http://localhost:3000/clients/67a4a5d763f69ae95069344c HTTP/1.1
+
+### Create Client
+POST http://localhost:3000/clients HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Javier Delgado para eliminar",
+    "phone": "+1234567890",
+    "email": "johndenver@example.com",
+    "address": "123 Main St, Miami, FL",
+    "membershipLevel": "Gold",
+    "preferences": {
+      "roomType": "Suite",
+      "dietaryRestrictions": [
+        "Vegetarian"
+      ],
+      "preferredActivities": [
+        "Spa",
+        "Kayaking"
+      ]
+    },
+    "loyaltyPoints": 1200
+}
+
+### Put Client (Update) 
+PUT http://localhost:3000/clients/67abba2a0c4c167992543be2 HTTP/1.1 
+Content-Type: application/json
+
+{
+    "name": "Juan Gray II",
+    "phone": "+1234567890",
+    "email": "johndenver@example.com",
+    "address": "123 Main St, Miami, FL",
+    "membershipLevel": "Gold",
+    "preferences": {
+      "roomType": "Suite",
+      "dietaryRestrictions": [
+        "Vegetarian"
+      ],
+      "preferredActivities": [
+        "Spa",
+        "Kayaking"
+      ]
+    },
+    "loyaltyPoints": 1200
+}
+
+### Delete Contact 
+DELETE http://localhost:3000/clients/67abba2a0c4c167992543be2 HTTP/1.1
+
+### -------------------ACTIVITIES ---------------------------------------
+GET http://localhost:3000/activities HTTP/1.1
+
+### Get Activity by id 
+GET http://localhost:3000/activities/67a03995ff3be0e09fe540b5 HTTP/1.1
+
+### Create Activity 
+POST http://localhost:3000/activities HTTP/1.1
+Content-Type: application/json
+
+{
+  "activityName": "Kayaking test",
+  "description": "Enjoy a guided snorkling experience.",
+  "schedule": [
+    {
+      "day": "Monday",
+      "time": "10:00 AM - 12:00 PM"
+    },
+    {
+      "day": "Wednesday",
+      "time": "2:00 PM - 4:00 PM"
+    }
+  ],
+  "capacity": 10,
+  "price": 500,
+  "status": "Available"
+}
+
+### Put Activity (Update) 
+PUT http://localhost:3000/activities/67a03995ff3be0e09fe540b5 HTTP/1.1 
+Content-Type: application/json
+
+{
+  "activityName": "Kayaking Update test VII",
+  "description": "Enjoy a guided snorkling experience.",
+  "schedule": [
+    {
+      "day": "Monday",
+      "time": "10:00 AM - 12:00 PM"
+    },
+    {
+      "day": "Wednesday",
+      "time": "2:00 PM - 4:00 PM"
+    }
+  ],
+  "capacity": 10,
+  "price": 500,
+  "status": "Available"
+}
+
+### Delete Activity 
+DELETE http://localhost:3000/activities/67a03995ff3be0e09fe540b5 HTTP/1.1
+
+### -------------------RESERVATIONS ---------------------------------------
+GET http://localhost:3000/reservations HTTP/1.1
+
+
+###Get Reservation by ID
+GET http://localhost:3000/reservations/67a434f09fd8cc505f33209f HTTP/1.1
+
+###Get Reservation by ClientID
+GET http://localhost:3000/reservations/client/65a2bcdef123456789abcdef0 HTTP/1.1
+
+###POST a new reservation
+POST http://localhost:3000/reservations HTTP/1.1
+Content-Type: application/json
+
+{
+  "clientId": "67a039adff3be0e09fe540b8",
+  "roomType": "Single Suite",
+  "checkInDate": "2025-08-10T14:00:00Z",
+  "checkOutDate": "2025-09-20T11:00:00Z",
+  "status": "Confirmed",
+  "totalPrice": 2000.00,
+  "paymentStatus": "Paid"
+}
+
+###Modify a new reservation
+
+PUT http://localhost:3000/reservations/67abba890c4c167992543be4 HTTP/1.1
+Content-Type: application/json
+
+{
+  "clientId": "67a039adff3be0e09fe540b8",
+  "roomType": "Deluxe Suite",
+  "checkInDate": "2025-08-10T14:00:00Z",
+  "checkOutDate": "2025-09-20T11:00:00Z",
+  "status": "Confirmed",
+  "totalPrice": 2500.00,
+  "paymentStatus": "Paid"
+}
+
+###Delete a reservation
+
+DELETE http://localhost:3000/reservations/67abba890c4c167992543be4 HTTP/1.1
+
+### -------------------RESTAURANTS ---------------------------------------
+
+GET http://localhost:3000/restaurants HTTP/1.1
+
+###Get Restaurant by ID
+GET http://localhost:3000/restaurants/67a039e8ff3be0e09fe540bc HTTP/1.1
+
+###Create a Restaurant Reservation
+POST http://localhost:3000/restaurants HTTP/1.1
+Content-Type: application/json
+
+{
+
+  "restaurantName": "Testing Restaurant II",
+  "cuisineType": "Seafood",
+  "menu": [
+    {
+      "itemName": "Grilled Shrimps",
+      "price": 35.99,
+      "dietaryInfo": [
+        "Gluten-Free",
+        "High-Protein"
+      ]
+    },
+    {
+      "itemName": "Carbonara Pasta",
+      "price": 28.5,
+      "dietaryInfo": [
+        "Vegan"
+      ]
+    }
+  ],
+  "reservations": [
+    {
+      "reservationDate": "2025-08-16T19:30:00Z",
+      "numOfGuests": 2,
+      "status": "Confirmed"
+    }
+  ],
+  "location": "Main Building, 3rd Floor"
+}
+
+###Update a Restaurant Reservation
+PUT http://localhost:3000/restaurants/67ab3b72f2957aaad9d2cad4 HTTP/1.1
+Content-Type: application/json
+
+{
+
+  "restaurantName": "Testing Restaurant II",
+  "cuisineType": "Seafood",
+  "menu": [
+    {
+      "itemName": "Grilled Shrimps",
+      "price": 35.99,
+      "dietaryInfo": [
+        "Gluten-Free",
+        "High-Protein"
+      ]
+    },
+    {
+      "itemName": "Carbonara Pasta",
+      "price": 28.5,
+      "dietaryInfo": [
+        "Vegan"
+      ]
+    }
+  ],
+  "reservations": [
+    {
+      "reservationDate": "2025-08-16T19:30:00Z",
+      "numOfGuests": 2,
+      "status": "Confirmed"
+    }
+  ],
+  "location": "Main Building, 3rd Floor"
+}
+
+###Delete a Restaurant Reservation
+DELETE http://localhost:3000/restaurants/67ab3b72f2957aaad9d2cad4 HTTP/1.1

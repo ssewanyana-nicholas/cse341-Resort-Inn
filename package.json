@@ -1,0 +1,60 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "connect-mongo": "^5.1.0",
+    "connect-mongodb-session": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "joi": "^17.13.3",
+    "mongodb": "^6.13.0",
+    "npm": "^11.1.0",
+    "passport": "^0.7.0",
+    "passport-github2": "^0.1.12",
+    "swagger-ui-express": "^5.0.1",
+    "yaml": "^2.7.0"
+  },
+  "name": "cse341-resort-inn",
+  "version": "1.0.0",
+  "description": "cse341 Team Project by Jack Loo, Boluwatife Omotoyinbo, Dehyu DM Cassell, Dereck Romero Moscoso, Liezl Lizardo, Sarah Imarhenakhue Ogiefa",
+  "main": "server.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit --testTimeout=30000",
+    "test:watch": "cross-env NODE_ENV=test jest --watch --detectOpenHandles",
+    "start": "cross-env NODE_ENV=production nodemon server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testTimeout": 90000,
+    "setupFilesAfterEnv": [
+      "./jest.setup.js"
+    ],
+    "verbose": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liezl1106/cse341-Resort-Inn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/liezl1106/cse341-Resort-Inn/issues"
+  },
+  "homepage": "https://github.com/liezl1106/cse341-Resort-Inn#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.4.2",
+    "supertest": "^7.0.0",
+    "swagger-autogen": "^2.23.7"
+  }
+}

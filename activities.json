@@ -1,0 +1,25 @@
+[
+  {
+    "activityName": "Kayaking",
+    "description": "Enjoy a guided kayaking experience in our private lagoon.",
+    "schedule": [
+      { "day": "Monday", "time": "10:00 AM - 12:00 PM" },
+      { "day": "Wednesday", "time": "2:00 PM - 4:00 PM" }
+    ],
+    "capacity": 10,
+    "price": 150.00,
+    "status": "Available"
+  },
+  {
+    "activityName": "Snorkling",
+    "description": "Enjoy a guided snorkling experience.",
+    "schedule": [
+      { "day": "Monday", "time": "10:00 AM - 12:00 PM" },
+      { "day": "Wednesday", "time": "2:00 PM - 4:00 PM" }
+    ],
+    "capacity": 10,
+    "price": 500.00,
+    "status": "Available"
+  }
+]
+  

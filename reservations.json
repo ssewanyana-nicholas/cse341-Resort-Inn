@@ -1,0 +1,11 @@
+[
+  {
+    "clientId": "65a2bcdef123456789abcdef0",
+    "roomType": "Deluxe Suite",
+    "checkInDate": "2025-07-15T14:00:00Z",
+    "checkOutDate": "2025-07-20T11:00:00Z",
+    "status": "Confirmed", 
+    "totalPrice": 1500.00,
+    "paymentStatus": "Paid"
+  }
+]

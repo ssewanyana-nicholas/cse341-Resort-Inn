@@ -1,0 +1,27 @@
+[
+  {
+    "restaurantName": "Sunset Grill",
+    "cuisineType": "Seafood",
+    "menu": [
+      {
+        "itemName": "Grilled Salmon",
+        "price": 25.99,
+        "dietaryInfo": ["Gluten-Free", "High-Protein"]
+      },
+      {
+        "itemName": "Vegan Pasta",
+        "price": 18.50,
+        "dietaryInfo": ["Vegan"]
+      }
+    ],
+    "reservations": [
+      {
+        "reservationDate": "2025-07-16T19:30:00Z",
+        "numOfGuests": 2,
+        "status": "Confirmed"
+      }
+    ],
+    "location": "Main Building, 2nd Floor"
+  }
+]
+  

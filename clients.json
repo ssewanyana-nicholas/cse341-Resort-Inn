@@ -1,0 +1,16 @@
+[
+  {
+    "name": "John Denver",
+    "phone": "+1234567890",
+    "email": "johndenver@example.com",
+    "address": "123 Main St, Miami, FL",
+    "membershipLevel": "Gold",  
+    "preferences": {
+      "roomType": "Suite",
+      "dietaryRestrictions": ["Vegetarian"],
+      "preferredActivities": ["Spa", "Kayaking"]
+    },
+    "loyaltyPoints": 1200
+  }
+]
+  
