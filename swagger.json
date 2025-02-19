@@ -5,10 +5,10 @@
     "description": "API documentation for Resort Inn",
     "version": "1.0.0"
   },
- "host": "cse341-resort-inn.onrender.com",
+ "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "securityDefinitions": {
     "oauth2": {
